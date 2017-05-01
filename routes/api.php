@@ -15,10 +15,17 @@ use Illuminate\Http\Request;
 
 
 // sample API
-Route::get('/rooms',function(){
+//Route::get('/rooms',function(){
+//
+//	return \App\Room::all();
+//
+//});
 
-	return \App\Room::all();
-	
+Route::get('/gallery',function(){
+
+    return \App\GalleryTable::all();
+//    return DB::table('GalleryTable')->get();
+
 });
 
 
