@@ -22,11 +22,31 @@ use Illuminate\Http\Request;
 //});
 
 Route::get('/gallery',function(){
-
     return \App\GalleryTable::all();
-//    return DB::table('GalleryTable')->get();
 
 });
+
+Route::get('/contacts',function(){
+    return ;
+
+});
+Route::get('/news',function(){
+    return ;
+
+});
+
+Route::get('/catalog',function(){
+    return ;
+
+});
+
+Route::get('/product',function(){
+    return ;
+
+});
+
+
+//Route::get('/blog',[ 'uses' => 'Controller@blog']);
 
 
 Route::get('/user', function (Request $request) {

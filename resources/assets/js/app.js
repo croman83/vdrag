@@ -21,6 +21,7 @@ Vue.use(VueRouter)
 // lazy load components
 const Room = (resolve) => require(['./components/Room.vue'], resolve)
 
+
 // Create and mount root instance.
 // Make sure to inject the router.
 // Route components will be rendered inside <router-view>.

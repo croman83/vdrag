@@ -417,14 +417,14 @@
           }
         }
       }
-      &.current{
-        &>a{
-          .screen(desktop,{color:@color-link;});
-          &:after{
-            .screen(desktop,{width:100%;});
-          }
-        }
-      }
+      //&.current{
+      //  //&>a{
+      //  //  .screen(desktop,{color:@color-link;});
+      //  //  &:after{
+      //  //    .screen(desktop,{width:100%;});
+      //  //  }
+      //  //}
+      //}
     }
     &_link{
       padding:13px 25px;
@@ -433,6 +433,12 @@
       font-weight:300;
       color:black;
       position: relative;
+      &.router-link-exact-active{
+        .screen(desktop,{color:@color-link;});
+        &:after{
+          .screen(desktop,{width:100%;});
+        }
+      }
       .screen(mobile,{
         padding:17px 15px;
       });
@@ -1533,7 +1539,7 @@
 
       #main-slider{
         .screen(desktop,{
-          width:calc(100% - 110px);
+          width:~'calc(100% - 110px)';
           height: 770px;
         });
         .screen(@break2,1170px,{
@@ -1545,7 +1551,7 @@
           height:475px;
         });
         .screen(2px,340px,{
-          width: calc(100% + 30px);
+          width: ~'calc(100% + 30px)';
           height: 475px;
           margin-left: -15px;
           margin-right: -15px;
@@ -1619,7 +1625,7 @@
                 content:'';
                 position: absolute;
                 width:100%;
-                height:calc(100% - 30px);
+                height:~'calc(100% - 30px)';
                 top:15px;
                 left:0;
                 border:3px solid transparent;
@@ -3991,18 +3997,18 @@
   margin-bottom: 50px;
   &-wrapper{
     .flex(row,wrap,flex-start,flex-start);
-    width:calc(100% + 30px);
+    width:~'calc(100% + 30px)';
     margin:0 -15px;
   }
   &-item{
-    width:calc(33.33% - 30px);
+    width:~'calc(33.33% - 30px)';
     margin:15px;
     min-width: 290px;
     .screen(2px,1024px,{
-      width:calc(50% - 30px);
+      width:~'calc(50% - 30px)';
     });
     .screen(2px,642px,{
-      width:calc(100% - 30px);
+      width:~'calc(100% - 30px)';
     });
     .img{
       height: 18vw;
